@@ -26,6 +26,9 @@ class StarSystem
     planets.find_all {|planet| planet.number_of_moons == 0}
   end
 
-
+  def get_planets_with_more_moons(number)
+    moony_planets = planets.find_all {|planet| planet.number_of_moons > number}
+    moony_planets.map {|planet| planet.name}
+  end
 
 end
