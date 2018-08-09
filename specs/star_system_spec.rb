@@ -33,10 +33,10 @@ class TestStarSystem < Minitest::Test
   #   assert_equal(expected_names, @solar_system.planet_names)
   # end
   #
-  def test_get_planet_by_name
-    result = @solar_system.get_planet_by_name("Mars")
-    assert_equal(@mars, result)
-  end
+  # def test_get_planet_by_name
+  #   result = @solar_system.get_planet_by_name("Mars")
+  #   assert_equal(@mars, result)
+  # end
   #
   # def test_get_largest_planet
   #   result = @solar_system.get_largest_planet
@@ -54,11 +54,11 @@ class TestStarSystem < Minitest::Test
   #   assert_equal(expected_planets, result)
   # end
   #
-  # def test_get_names_of_planet_with_more_than_four_moons
-  #   expected_names = ["Jupiter", "Neptune", "Saturn", "Uranus"]
-  #   result = @solar_system.get_planets_with_more_moons(4)
-  #   assert_equal(expected_names, result)
-  # end
+  def test_get_names_of_planet_with_more_than_four_moons
+    expected_names = ["Jupiter", "Neptune", "Saturn", "Uranus"]
+    result = @solar_system.get_planets_with_more_moons(4)
+    assert_equal(expected_names, result)
+  end
   #
   # def test_number_of_planets_less_than_1billion_km_from_sun
   #   result = @solar_system.get_number_of_planets_closer_than(1000)
