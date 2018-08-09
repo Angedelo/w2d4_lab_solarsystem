@@ -31,4 +31,10 @@ class StarSystem
     moony_planets.map {|planet| planet.name}
   end
 
+  def get_number_of_planets_closer_than(number)
+    close_planets = planets.find_all {|planet| planet.distance_from_sun < number}
+    close_planets.map {|planet| planet.name}
+    close_planets.count
+  end
+
 end
